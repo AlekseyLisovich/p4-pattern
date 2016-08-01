@@ -29,75 +29,72 @@ namespace AlchemistCauldron
                 try
                 {
                     cauldronResult = cauldron.ExecuteAlgorithm(formulas);
+                    Console.WriteLine("After mixing => {0}", cauldronResult);
                 }
                 catch(Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
 
-                Console.WriteLine(cauldronResult);
                 Console.ReadLine();
 
             } while (true);
         }
 
-        public static void ShowElements(ElementsList elemList)
+        public static void ShowElements(ElementsList elemList, string tableName)
         {
+            Console.Clear();
+            Console.WriteLine(" -------" + tableName + "-------");
             foreach (Element e in elemList)
             {
                 Console.WriteLine("  Value: {0}, Index: {1}", e.Value, e.Index);
             }
         }
 
-        public static void ChooseElements(ElementsList elemList, ElementsList formula, string tableName)
+        public static void ChooseElements(ElementsList elemList, ElementsList formula, string tName)
         {
-
-            Console.Clear();
-            Console.WriteLine(" -------" + tableName + "-------");
-            ShowElements(elemList);
+            ShowElements(elemList, tName);
             int y = 0;
-            bool functionExit = true;
-            do
+            bool exit = false;
+            if (elemList.GetCount() != 0)
             {
-                switch (Console.ReadKey().Key)
+                do
                 {
-                    case ConsoleKey.UpArrow:
-                        y--;
-                        break;
-                    case ConsoleKey.DownArrow:
-                        y++;
-                        break;
-                    case ConsoleKey.Enter:
-                        if (elemList.GetCount() != 0)
-                        {
+                    switch (Console.ReadKey().Key)
+                    {
+                        case ConsoleKey.UpArrow:
+                            y--;
+                            break;
+                        case ConsoleKey.DownArrow:
+                            y++;
+                            break;
+                        case ConsoleKey.Enter:
                             formula.AddElementTo(elemList, y - 1);
                             elemList.DeleteElement(y - 1);
-                        }
-                        Console.Clear();
-                        Console.WriteLine(" -------" + tableName + "-------");
-                        ShowElements(elemList);
-                        break;
-                    case ConsoleKey.End:
-                        functionExit = false;
-                        break;
-                }
+                            ShowElements(elemList, tName);
+                            break;
+                        case ConsoleKey.End:
+                            exit = true;
+                            break;
+                    }
 
-                if (y < 1)
-                    y = 1;
-                if (y >= elemList.GetCount())
-                    y = elemList.GetCount();
+                    if (y < 1)
+                        y = 1;
+                    if (y >= elemList.GetCount())
+                        y = elemList.GetCount();
 
-                Console.SetCursorPosition(0, y);
-                Console.Write((char)16);
-                if (y > 0)
-                {
-                    Console.SetCursorPosition(0, y - 1);
+                    Console.SetCursorPosition(0, y);
+                    Console.Write((char)16);
+                    if (y > 0)
+                    {
+                        Console.SetCursorPosition(0, y - 1);
+                        Console.Write(" ");
+                    }
+                    Console.SetCursorPosition(0, y + 1);
                     Console.Write(" ");
-                }
-                Console.SetCursorPosition(0, y + 1);
-                Console.Write(" ");
 
-            } while (functionExit);
+                } while (!exit);
+            }
         }
 
         public static void SetElements(ElementsList elements)

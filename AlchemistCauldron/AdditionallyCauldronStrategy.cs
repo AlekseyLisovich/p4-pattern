@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace AlchemistCauldron
 {
-    /*class AdditionallyCauldronStrategy : ICauldronStrategy
+    class AdditionallyCauldronStrategy : ICauldronStrategy
     {
         public Formula Action(ElementsList elemList, List<Formula> formula)
         {
-            //some strategy
-           
+            var foundFormula = formula.FirstOrDefault(f =>
+            {
+                return elemList.GetCount() == f.Elements.Count() && elemList.Elements.Any(e => f.Elements.Contains(e.Value));
+            });
+
+            if (foundFormula != null)
+                return foundFormula;
+            else
+                return null;          
         }
-    }*/
+    }
 }
 

@@ -4,3 +4,9 @@ D:\work\net_lab\git_test_project_vs\AlchemistCauldron\bin\Debug\AlchemistCauldro
 D:\work\net_lab\git_test_project_vs\AlchemistCauldron\obj\Debug\AlchemistCauldron.csprojResolveAssemblyReference.cache
 D:\work\net_lab\git_test_project_vs\AlchemistCauldron\obj\Debug\AlchemistCauldron.exe
 D:\work\net_lab\git_test_project_vs\AlchemistCauldron\obj\Debug\AlchemistCauldron.pdb
+E:\Projects\p4-patterns\p4-patterns\AlchemistCauldron\bin\Debug\AlchemistCauldron.exe.config
+E:\Projects\p4-patterns\p4-patterns\AlchemistCauldron\obj\Debug\AlchemistCauldron.exe
+E:\Projects\p4-patterns\p4-patterns\AlchemistCauldron\obj\Debug\AlchemistCauldron.pdb
+E:\Projects\p4-patterns\p4-patterns\AlchemistCauldron\bin\Debug\AlchemistCauldron.exe
+E:\Projects\p4-patterns\p4-patterns\AlchemistCauldron\bin\Debug\AlchemistCauldron.pdb
+E:\Projects\p4-patterns\p4-patterns\AlchemistCauldron\obj\Debug\AlchemistCauldron.csprojResolveAssemblyReference.cache

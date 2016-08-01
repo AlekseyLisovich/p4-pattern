@@ -13,7 +13,7 @@ namespace AlchemistCauldron
 
         private ICauldronStrategy _calstrategy;
 
-        public void AddElements()
+        public Cauldron()
         {
             formulas.Add(new Formula(new string[] { "fire", "water" }, "firewater"));
             formulas.Add(new Formula(new string[] { "air", "earth" }, "dust"));
@@ -30,6 +30,11 @@ namespace AlchemistCauldron
             formulas.Add(new Formula(new string[] { "water", "life" }, "grass"));
             formulas.Add(new Formula(new string[] { "air", "swamp", "energy", "stone" }, "bird"));
             formulas.Add(new Formula(new string[] { "sourcream", "milk", "life" }, "cat"));
+        }
+
+        public void AddElements()
+        {
+            
         }
 
         public IEnumerator GetEnumerator()
