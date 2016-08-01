@@ -1,0 +1,6 @@
+D:\work\net_lab\git_test_project_vs\AlchemistCauldron\bin\Debug\AlchemistCauldron.exe.config
+D:\work\net_lab\git_test_project_vs\AlchemistCauldron\bin\Debug\AlchemistCauldron.exe
+D:\work\net_lab\git_test_project_vs\AlchemistCauldron\bin\Debug\AlchemistCauldron.pdb
+D:\work\net_lab\git_test_project_vs\AlchemistCauldron\obj\Debug\AlchemistCauldron.csprojResolveAssemblyReference.cache
+D:\work\net_lab\git_test_project_vs\AlchemistCauldron\obj\Debug\AlchemistCauldron.exe
+D:\work\net_lab\git_test_project_vs\AlchemistCauldron\obj\Debug\AlchemistCauldron.pdb
